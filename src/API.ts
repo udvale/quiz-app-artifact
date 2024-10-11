@@ -15,13 +15,16 @@ export enum Difficulty {
   HARD = "hard",
 }
 
+
+
 export type QuestionsState = Question & {answers: string[]};
 
 export const fetchQuizQuestions = async (
   amount: number,
-  difficulty: Difficulty
+  difficulty: Difficulty,
+  category: number
 ): Promise<QuestionsState[]> => {
-  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple&category=18`;
+  const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple&category=${category}`;
   const data = await (await fetch(endpoint)).json();
   return data.results.map((question: Question) => ({
     ...question,
