@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {InputWrapper} from "../App.styles";
+import Calculator from "./Calculator";
 
 type Props = {
   question: string;
@@ -22,7 +23,7 @@ const InputQuestionCard: React.FC<Props> = ({
     e.preventDefault();
     if (userInput.trim() === "") return;
     callback(e, userInput);
-    setUserInput(""); // Clear the input after submission
+    setUserInput("");
   };
 
   return (
@@ -43,6 +44,11 @@ const InputQuestionCard: React.FC<Props> = ({
         </button>
       </form>
       {userAnswer && <p>Your Answer: {userAnswer}</p>}
+      <div
+        style={{marginTop: "20px", display: "flex", justifyContent: "center"}}
+      >
+        <Calculator />
+      </div>
     </InputWrapper>
   );
 };

@@ -5,6 +5,7 @@ import QuestionCard from "./components/QuestionCard";
 import InputQuestionCard from "./components/InputQuestionCard";
 import {QuestionsState, Difficulty} from "./API";
 import {GlobalStyle, Wrapper, SettingsWrapper} from "./App.styles";
+// import Calculator from "./components/Calculator";
 
 export type AnswerObject = {
   question: string;
@@ -180,6 +181,7 @@ const App: React.FC = () => {
           </h1>
           {!gameOver ? <p className="score">Score: {score}</p> : null}
           {loading ? <p>Loading Questions...</p> : null}
+          {/* {!loading && selectedCategory === 20 && <Calculator />} */}
           {!loading && !gameOver && questions[number].type === "multiple" && (
             <QuestionCard
               questionNr={number + 1}
@@ -213,7 +215,6 @@ const App: React.FC = () => {
                 Next Question
               </button>
             )}
-          {/* Go Back to Home Button */}
           {!loading && gameOver && number === totalQuestions - 1 && (
             <button className="start" onClick={resetQuiz}>
               Go Back to Home

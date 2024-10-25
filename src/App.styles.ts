@@ -130,6 +130,7 @@ export const SettingsWrapper = styled.div`
   }
 `;
 
+
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
