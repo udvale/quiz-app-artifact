@@ -32,7 +32,7 @@ const InputQuestionCard: React.FC<Props> = ({
         Question {questionNr} of {totalQuestions}
       </p>
       <div className="question-text">{question}</div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{marginBottom: "20px"}}>
         <input
           type="text"
           value={userInput}
@@ -44,8 +44,14 @@ const InputQuestionCard: React.FC<Props> = ({
         </button>
       </form>
       {userAnswer && <p>Your Answer: {userAnswer}</p>}
+
       <div
-        style={{marginTop: "20px", display: "flex", justifyContent: "center"}}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          flexDirection: "column",
+        }}
       >
         <Calculator />
       </div>
