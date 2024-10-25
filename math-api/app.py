@@ -1,3 +1,7 @@
+#Author: Pranav Mishra
+#Minor edits by Udval Enkhtaivan
+#Last-modified: 10/25/2024
+
 from flask import Flask, jsonify
 from flask_cors import CORS
 from mathgenerator import genById
