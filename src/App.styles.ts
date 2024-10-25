@@ -49,22 +49,22 @@ export const Wrapper = styled.div`
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
     filter: drop-shadow(2px 2px #000);
-    font-size: 70px;
+    font-size: 60px;
     text-align: center;
     margin: 20px;
   }
 
   .start, .next {
     cursor: pointer;
-    background: linear-gradient(180deg, #f8f9fa, #d4d4d4); /* Softer colors to match the white Miffy background */
+    background: linear-gradient(180deg, #f8f9fa, #d4d4d4); 
     border: 2px solid #000;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     height: 50px;
     margin: 20px 0;
     padding: 0 40px;
-    font-size: 1.2rem; /* Make text inside buttons larger */
-    font-family: 'Comfortaa', cursive; /* Aesthetic font for buttons */
+    font-size: 1.2rem; 
+    font-family: 'Comfortaa', cursive;
   }
     
 
@@ -78,12 +78,12 @@ export const SettingsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 600px;  /* Adjusted container width */
+  width: 600px; 
   background: #222831;
   border-radius: 10px;
   border: 2px solid #393e46;
   padding: 20px;
-  margin: 15vh auto;  /* Vertically center the box */
+  margin: 15vh auto;  
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   text-align: center;
   color: #f8f9fa;
@@ -103,8 +103,8 @@ export const SettingsWrapper = styled.div`
 
   select,
   input {
-    margin-left: 10px;  /* Small space between label and dropdown/input */
-    padding: 8px;  /* Slightly smaller padding for better alignment */
+    margin-left: 10px;  
+    padding: 8px; 
     border-radius: 5px;
     border: 1px solid #393e46;
     background: #eeeeee;
@@ -113,7 +113,7 @@ export const SettingsWrapper = styled.div`
 
   button {
     cursor: pointer;
-    background: linear-gradient(180deg, #f8f9fa, #d4d4d4);  /* Match the existing button color scheme */
+    background: linear-gradient(180deg, #f8f9fa, #d4d4d4); 
     border: 2px solid #000;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -121,7 +121,7 @@ export const SettingsWrapper = styled.div`
     padding: 10px 20px;
     margin-top: 20px;
     font-size: 1.2rem;
-    font-family: 'Comfortaa', cursive;  /* Match the existing font for consistency */
+    font-family: 'Comfortaa', cursive;  
     transition: all 0.3s ease;
 
     &:hover {
@@ -129,3 +129,54 @@ export const SettingsWrapper = styled.div`
     }
   }
 `;
+
+export const InputWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+
+  .question-number {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f8f9fa; 
+  }
+
+  .question-text {
+    // font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    padding: 10px 20px;
+    color: #f8f9fa; 
+    background: #2e2e2e; 
+    border-radius: 5px;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+  }
+
+  button {
+    cursor: pointer;
+    background: linear-gradient(180deg, #ffffff, #b3b3b3);
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #e0e0e0;
+    }
+  }
+`;
+
