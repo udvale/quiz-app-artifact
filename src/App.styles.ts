@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 100vh; 
+  min-height: 100vh; 
 
   > p {
     color: #f8f9fa;
