@@ -1,3 +1,6 @@
+//Author: Pranav Mishra
+//Minor edits: Udval Enkhtaivan
+//Last Modified: 10/25/2024
 import React, {useState} from "react";
 
 // Define the Calculator component
