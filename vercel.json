@@ -2,14 +2,11 @@
   "version": 2,
   "builds": [
     {"src": "math-api/app.py", "use": "@vercel/python"},
-    {
-      "src": "src/**/*",
-      "use": "@vercel/static-build",
-      "config": {"distDir": "build"}
-    }
+    {"src": "package.json", "use": "@vercel/static-build"}
   ],
   "routes": [
     {"src": "/api/generate", "dest": "/math-api/app.py"},
     {"src": "/api/opentdb", "dest": "/math-api/app.py"}
   ]
 }
+ 
