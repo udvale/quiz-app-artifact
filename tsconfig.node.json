@@ -7,7 +7,7 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true
+    "emitDeclarationOnly": true//Pranav is changing this line to "emitDeclarationOnly": true
   },
   "include": ["vite.config.ts"]
 }
