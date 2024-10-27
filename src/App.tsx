@@ -181,7 +181,6 @@ const App: React.FC = () => {
           </h1>
           {!gameOver ? <p className="score">Score: {score}</p> : null}
           {loading ? <p>Loading Questions...</p> : null}
-          {/* {!loading && selectedCategory === 20 && <Calculator />} */}
           {!loading && !gameOver && questions[number].type === "multiple" && (
             <QuestionCard
               questionNr={number + 1}
