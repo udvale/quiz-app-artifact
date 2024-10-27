@@ -25,4 +25,5 @@ dist-ssr
 
 # env variable
 .env.local
+.env
 .rnv

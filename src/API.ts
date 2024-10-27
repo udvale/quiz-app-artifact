@@ -127,6 +127,7 @@ export enum Difficulty {
 }
 
 export type QuestionsState = Question & {answers: string[]};
+const BASE_URL = process.env.REACT_APP_API_URL || "http://127.0.0.1:5000";
 
 export const fetchQuizQuestions = async (
   amount: number,
@@ -139,7 +140,7 @@ export const fetchQuizQuestions = async (
       const mathQuestions: QuestionsState[] = [];
 
       for (let i = 0; i < amount; i++) {
-        const response = await axios.get("http://127.0.0.1:5000/generate");
+        const response = await axios.get(`${BASE_URL}/generate`);
         const data = response.data;
 
         mathQuestions.push({
@@ -157,7 +158,7 @@ export const fetchQuizQuestions = async (
     } else {
       // OpenTDB API for other categories
       const endpoint = `https://opentdb.com/api.php?amount=${amount}&difficulty=${difficulty}&type=multiple&category=${category}`;
-      const data = await(await fetch(endpoint)).json();
+      const data = await (await fetch(endpoint)).json();
 
       return data.results.map((question: Question) => ({
         ...question,
