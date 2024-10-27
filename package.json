@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "vitest"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.50.1",
@@ -18,7 +19,13 @@
     "styled-components": "^6.1.11"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@types/cypress": "^1.1.6",
+=======
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+>>>>>>> 0dd7cdeb0ad080ec7a2d485170b7196fe4ea2e3d
     "@types/node": "^22.8.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
@@ -29,7 +36,12 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.7",
+<<<<<<< HEAD
     "typescript": "^5.6.3",
+=======
+    "happy-dom": "^15.7.4",
+    "typescript": "^5.2.2",
+>>>>>>> 0dd7cdeb0ad080ec7a2d485170b7196fe4ea2e3d
     "vite": "^5.3.1",
     "vitest": "^2.1.3"
   }
